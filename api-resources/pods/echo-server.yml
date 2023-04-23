@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo-server
+  labels:
+    env: demo
+    owner: chrono
+
+spec:
+  containers:
+  - image: kicbase/echo-server
+    name: echo
+    ports:
+      - containerPort: 8080
