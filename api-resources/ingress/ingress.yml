@@ -1,21 +1,22 @@
 # ingress class
-apiVersion: networking.k8s.io/v1
-kind: IngressClass
-metadata:
-  name: ngx-ink
+# apiVersion: networking.k8s.io/v1
+# kind: IngressClass
+# metadata:
+  # name: ngx-ink
 
-spec:
-  controller: nginx.org/ingress-controller
----
+# spec:
+  # controller: nginx.org/ingress-controller
+# ---
+
 # ingress
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ngx-ing
+  name: ngx-ingress
 
 spec:
 
-  ingressClassName: ngx-ink
+  ingressClassName: nginx
 
   rules:
   - host: ngx.test
